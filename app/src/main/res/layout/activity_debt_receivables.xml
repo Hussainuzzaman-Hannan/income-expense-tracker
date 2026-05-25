@@ -1,22 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="?attr/colorPrimary"
-    android:padding="16dp"
     tools:context=".DebtReceivablesActivity">
 
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/debt_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/debt_back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Back"
+            android:tint="?attr/colorOnPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Debt &amp; Receivables"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnPrimary"
+            android:gravity="center"
+            android:paddingEnd="40dp"/>
+    </LinearLayout>
+
+    <!-- Summary Cards -->
+    <LinearLayout
+        android:id="@+id/debt_summary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginTop="56dp">
+
+        <!-- I Owe Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#33E53935"
+            android:padding="12dp"
+            android:layout_marginEnd="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/debt_type_owe"
+                android:textColor="#FFE53935"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/total_owe_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFE53935"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="৳0.00" />
+        </LinearLayout>
+
+        <!-- They Owe Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#3343A047"
+            android:padding="12dp"
+            android:layout_marginStart="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/debt_type_owed"
+                android:textColor="#FF43A047"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/total_owed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF43A047"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="৳0.00" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Empty State Text -->
     <TextView
+        android:id="@+id/debt_empty_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/debt_receivables_under_construction"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="@string/debt_empty_message"
         android:textColor="?attr/colorOnPrimary"
-        android:gravity="center"
-        android:padding="16dp"/>
+        android:textSize="16sp"
+        android:alpha="0.6"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
-</LinearLayout>
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/debt_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="176dp"
+        android:layout_marginBottom="72dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_debt" />
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_debt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Debt"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
