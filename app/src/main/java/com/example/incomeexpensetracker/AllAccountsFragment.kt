@@ -7,18 +7,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView // Import TextView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.text.NumberFormat
-import java.util.*
 
 class AllAccountsFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var transactionAdapter: TransactionAdapter
-    private lateinit var currencyFormatter: NumberFormat
     private lateinit var noTransactionsTextView: TextView // New: For the "No transactions yet" message
 
     override fun onCreateView(
@@ -36,26 +33,17 @@ class AllAccountsFragment : Fragment() {
         recyclerView = view.findViewById(R.id.transactions_recycler_view)
         noTransactionsTextView = view.findViewById(R.id.no_transactions_text_view) // Initialize the new TextView
 
-        // Initialize currency formatter based on app's locale (assuming MainActivity sets it)
-        val currentLocale = Locale(
-            requireContext().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-                .getString("app_language", "en") ?: "en",
-            "BD" // Assuming Bangladesh for Taka, adjust if currency is dynamic
-        )
-        currencyFormatter = NumberFormat.getCurrencyInstance(currentLocale)
-
         transactionAdapter = TransactionAdapter(
             mutableListOf(), // Start with an empty list, it will be updated
-            currencyFormatter,
-            onItemClick = { transaction ->
-                // Handle item click, e.g., show edit dialog
-                (activity as? MainActivity)?.showEditTransactionDialog(transaction)
-                Log.d("AllAccountsFragment", "Transaction clicked: ${transaction.id}")
-            },
             onDeleteClick = { transactionId ->
                 // Handle delete click
                 (activity as? MainActivity)?.deleteTransaction(transactionId)
                 Log.d("AllAccountsFragment", "Transaction delete requested: $transactionId")
+            },
+            onEditClick = { transaction ->
+                // Handle item click, e.g., show edit dialog
+                (activity as? MainActivity)?.showEditTransactionDialog(transaction)
+                Log.d("AllAccountsFragment", "Transaction clicked: ${transaction.id}")
             }
         )
 
@@ -89,7 +77,7 @@ class AllAccountsFragment : Fragment() {
             recyclerView.visibility = View.VISIBLE
             noTransactionsTextView.visibility = View.GONE
             // Update the adapter with new data
-            transactionAdapter.updateTransactions(transactions.toMutableList())
+            transactionAdapter.updateList(transactions.toMutableList())
             Log.d("AllAccountsFragment", "RecyclerView UI updated with ${transactions.size} transactions.")
         }
     }

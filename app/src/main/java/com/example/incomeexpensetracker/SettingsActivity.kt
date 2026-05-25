@@ -7,8 +7,8 @@ import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
+import com.google.android.material.textfield.TextInputEditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.snackbar.Snackbar
@@ -28,7 +28,7 @@ class SettingsActivity : AppCompatActivity() {
     private val DEFAULT_EXPENSE_THRESHOLD = 5000.0 // Default value for the threshold
 
     private lateinit var currentThresholdTextView: TextView
-    private lateinit var newThresholdEditText: EditText
+    private lateinit var newThresholdEditText: TextInputEditText
     private lateinit var saveThresholdButton: Button
     private lateinit var toggleThemeButton: Button // Assuming a button for theme toggle for now
 
@@ -85,7 +85,7 @@ class SettingsActivity : AppCompatActivity() {
      * Saves the new expense threshold entered by the user.
      */
     private fun saveExpenseThreshold() {
-        val newThresholdString = newThresholdEditText.text.toString()
+        val newThresholdString = newThresholdEditText.text?.toString() ?: ""
         val newThreshold = newThresholdString.toDoubleOrNull()
 
         if (newThreshold == null || newThreshold <= 0) {
@@ -100,7 +100,7 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         updateCurrentThresholdDisplay() // Update the display immediately
-        newThresholdEditText.text.clear() // Clear input field
+        newThresholdEditText.text?.clear() // Clear input field
 
         val currencyFormatter = NumberFormat.getCurrencyInstance(Locale("bn", "BD"))
         showSnackbar(getString(R.string.threshold_saved_success, currencyFormatter.format(newThreshold)))

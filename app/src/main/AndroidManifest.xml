@@ -14,8 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IncomeExpenseTracker"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".PinEntryActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -23,13 +24,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Add the new DebtReceivablesActivity declaration here -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ReportsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".DebtReceivablesActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
-            <!-- No intent-filter needed as it's launched from MainActivity -->
-        </activity>
+            android:parentActivityName=".MainActivity" />
 
     </application>
 

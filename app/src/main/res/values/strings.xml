@@ -34,7 +34,8 @@
     <string name="calculator_button_description">Open Calculator</string>
     <string name="menu_button_description">Open Menu</string>
     <string name="share_button_description">Share Report</string>
-    <string name="report_expense_breakdown_title">Expense Breakdown</string> <string name="transaction_add_cancelled">Transaction addition cancelled.</string>
+    <string name="report_expense_breakdown_title">Expense Breakdown</string>
+    <string name="transaction_add_cancelled">Transaction addition cancelled.</string>
     <string name="transaction_added_success">Transaction added successfully!</string>
     <string name="transaction_updated_success">Transaction updated successfully!</string>
 
@@ -153,6 +154,30 @@
     <string name="category_freelance">Freelance</string>
     <string name="category_misc_income">Miscellaneous Income</string>
 
+    <!-- About Dialog -->
+    <string name="about_app_version">Version 1.0</string>
+    <string name="about_developer_name">Md. Hussainuzzaman Hannan</string>
+    <string name="about_email">mdhussainuzzamanhannan@gmail.com</string>
+    <string name="about_description">A simple and elegant income &amp; expense tracker with PIN lock, voice input, reports, and PDF/CSV export.</string>
+    <string name="about_close_button">Close</string>
+
+    <!-- Debt &amp; Receivables -->
+    <string name="debt_person_name_hint">Person\'s Name</string>
+    <string name="debt_amount_hint">Amount</string>
+    <string name="debt_note_hint">Note (optional)</string>
+    <string name="debt_type_owe">I Owe Them</string>
+    <string name="debt_type_owed">They Owe Me</string>
+    <string name="debt_empty_message">No debt or receivable entries yet.</string>
+    <string name="debt_deleted">Entry deleted.</string>
+    <string name="debt_added">Entry added successfully.</string>
+    <string name="debt_error_name">Please enter a person\'s name.</string>
+    <string name="debt_error_amount">Please enter a valid amount.</string>
+    <string name="debt_section_owe">I Owe</string>
+    <string name="debt_section_owed">They Owe Me</string>
+    <string name="debt_add_dialog_title">Add Debt / Receivable</string>
+    <string name="debt_save_button">Save</string>
+    <string name="debt_cancel_button">Cancel</string>
+
     <string-array name="transaction_categories">
         <item>@string/uncategorized</item>
         <item>@string/category_food</item>
@@ -189,7 +214,7 @@
         <item>@string/category_health</item>
         <item>@string/category_education</item>
         <item>@string/category_housing</item>
-        <item>@string>category_misc_expense</item>
+        <item>@string/category_misc_expense</item>
         <item>@string/uncategorized</item>
     </string-array>
 </resources>
