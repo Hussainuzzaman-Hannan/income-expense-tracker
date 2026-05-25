@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/neumorphic_background">
+
+    <!-- Date Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/date_label"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/neumorphic_input_background"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:id="@+id/dialog_date_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/select_date_hint"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="4dp" />
+        <ImageButton
+            android:id="@+id/dialog_date_picker_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_today"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/black"
+            android:contentDescription="@string/select_date_hint"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <!-- Category Spinner -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/category_label"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"/>
+    <Spinner
+        android:id="@+id/dialog_category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/neumorphic_input_background"
+        android:spinnerMode="dropdown"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:overlapAnchor="false"
+        android:dropDownVerticalOffset="@dimen/spinner_dropdown_vertical_offset"
+        android:layout_marginBottom="12dp"
+        style="@style/SpinnerStyle"/>
+
+    <!-- Description Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description_hint"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/neumorphic_input_background"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp">
+
+        <EditText
+            android:id="@+id/dialog_description_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="textCapSentences"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"
+            android:paddingStart="4dp"
+            android:hint=""/>
+        <ImageButton
+            android:id="@+id/dialog_voice_description_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_mic"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/black"
+            android:contentDescription="@string/voice_input_description"/>
+    </LinearLayout>
+
+    <!-- Amount Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/amount_hint"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/neumorphic_input_background"
+        android:padding="8dp"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/dialog_amount_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"
+            android:paddingStart="4dp"
+            android:hint=""/>
+        <ImageButton
+            android:id="@+id/dialog_voice_amount_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_mic"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/black"
+            android:contentDescription="@string/voice_input_amount"/>
+    </LinearLayout>
+
+    <!-- Cancel / Save Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/dialog_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_button"
+            android:background="@drawable/neumorphic_button_expense"
+            android:textColor="@color/red_expense"
+            android:textStyle="bold"
+            android:paddingVertical="12dp"
+            android:layout_marginEnd="8dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+        <Button
+            android:id="@+id/dialog_save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_button"
+            android:background="@drawable/neumorphic_button_income"
+            android:textColor="@color/green_income"
+            android:textStyle="bold"
+            android:paddingVertical="12dp"
+            android:layout_marginStart="8dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

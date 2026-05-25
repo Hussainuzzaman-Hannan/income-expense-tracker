@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Darker shadow (bottom-right) -->
+    <item android:bottom="4dp" android:right="4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <solid android:color="@color/neumorphic_dark_shadow"/>
+        </shape>
+    </item>
+    <!-- Lighter shadow (top-left) -->
+    <item android:top="4dp" android:left="4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <solid android:color="@color/neumorphic_light_shadow"/>
+        </shape>
+    </item>
+    <!-- Main shape (slightly smaller to reveal shadows) -->
+    <item android:bottom="2dp" android:right="2dp" android:top="2dp" android:left="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <solid android:color="@color/neumorphic_background"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IncomeExpenseTracker</string>
+
+    <string name="summary_title">Summary</string>
+    <string name="total_income_label">Total Income:</string>
+    <string name="total_expenses_label">Total Expenses:</string>
+    <string name="balance_label">Balance:</string>
+    <string name="add_transaction_title">Add Transaction</string>
+    <string name="date_label">Date:</string>
+    <string name="select_date_hint">Select Date</string>
+    <string name="description_hint">Description</string>
+    <string name="amount_hint">Amount</string>
+    <string name="add_income_button">Add Income</string>
+    <string name="add_expense_button">Add Expense</string>
+    <string name="search_transactions_title">Search Transactions</string>
+    <string name="search_hint">Search by keyword or date (dd/MM/yyyy)</string>
+    <string name="search_button">Search</string>
+    <string name="clear_search_button">Clear Search</string>
+    <string name="transactions_title">Transactions</string>
+    <string name="developed_by_credits">Developed by - Md. Hussainuzzaman Hannan</string>
+
+    <string name="tab_total_accounts">Total Accounts</string>
+    <string name="tab_all_accounts">All Accounts</string>
+
+    <string name="add_income_tab">Income</string>
+    <string name="add_expense_tab">Expense</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+    <string name="voice_input_description">Voice input for description</string>
+    <string name="voice_input_amount">Voice input for amount</string>
+    <string name="delete_transaction_description">Delete Transaction</string>
+    <string name="add_new_transaction_description">Add new transaction</string>
+    <string name="calculator_button_description">Open Calculator</string>
+    <string name="menu_button_description">Open Menu</string>
+    <string name="share_button_description">Share Report</string>
+    <string name="report_expense_breakdown_title">Expense Breakdown</string> <string name="transaction_add_cancelled">Transaction addition cancelled.</string>
+    <string name="transaction_added_success">Transaction added successfully!</string>
+    <string name="transaction_updated_success">Transaction updated successfully!</string>
+
+    <string name="speech_listening">Listening…</string>
+    <string name="speech_processing">Processing speech…</string>
+    <string name="speech_error_audio">Audio recording error.</string>
+    <string name="speech_error_client">Client side error.</string>
+    <string name="speech_error_insufficient_permissions">Insufficient permissions.</string>
+    <string name="speech_error_network">Network error.</string>
+    <string name="speech_error_network_timeout">Network timeout.</string>
+    <string name="speech_error_no_match">No speech recognized. Please try again.</string>
+    <string name="speech_error_recognizer_busy">Recognition service busy.</string>
+    <string name="speech_error_server">Server error.</string>
+    <string name="speech_error_speech_timeout">No speech input.</string>
+    <string name="speech_error_unknown">Unknown speech error.</string>
+    <string name="speech_recognition_error_prefix">Speech recognition error: %1$s</string>
+    <string name="permission_denied_voice_input">Audio recording permission denied. Voice input will not work.</string>
+    <string name="error_enter_description">Please enter a description.</string>
+    <string name="error_valid_positive_amount">Please enter a valid positive amount.</string>
+    <string name="transaction_deleted">Transaction deleted.</string>
+    <string name="no_transactions_found">No transactions found for \'%1$s\'.</string>
+    <string name="no_transactions_yet">No transactions added yet.</string>
+    <string name="search_cleared">Search cleared. Displaying all transactions.</string>
+    <string name="balance_exceeded_limit">Congratulations! Your balance has exceeded ৳%1$d!</string>
+    <string name="balance_negative_warning">Warning: Your balance is negative!</string>
+    <string name="error_saving_transactions">Error saving transactions: %1$s</string>
+    <string name="error_loading_transactions">Error loading transactions: %1$s</string>
+    <string name="file_export_cancelled">File export cancelled.</string>
+    <string name="csv_export_success">Transactions exported to CSV successfully!</string>
+    <string name="error_exporting_csv">Error exporting CSV: %1$s</string>
+    <string name="pdf_export_success">Transactions exported to PDF successfully!</string>
+    <string name="error_exporting_pdf">Error exporting PDF: %1$s</string>
+    <string name="transaction_type_label">Type</string>
+    <string name="transaction_category_label">Category</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+    <string name="menu_monthly_report">Monthly Report</string>
+    <string name="menu_weekly_report">Weekly Report</string>
+    <string name="menu_change_pin">Change PIN</string>
+    <string name="menu_export_csv">Export to CSV</string>
+    <string name="menu_export_pdf">Export to PDF</string>
+    <string name="menu_change_language">Change Language</string>
+    <string name="menu_reset_transactions">Reset All Transactions</string>
+    <string name="menu_debt_receivables">Debt &amp; Receivables</string>
+
+    <string name="debt_receivables_under_construction">Debt and Receivables section is under construction.</string>
+
+    <string name="settings_clicked_message">Settings clicked!</string>
+    <string name="about_clicked_message">About clicked!</string>
+
+    <string name="pin_instruction_enter">Enter your PIN</string>
+    <string name="pin_hint">PIN</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="pin_not_set_message">No PIN set. Please set a new PIN.</string>
+    <string name="set_new_pin_button">Set New PIN</string>
+    <string name="pin_length_error">PIN must be 4 digits.</string>
+    <string name="pin_correct_unlocking">PIN correct. Unlocking app…</string>
+    <string name="pin_incorrect">Incorrect PIN. Please try again.</string>
+    <string name="pin_instruction_set">Set a 4-digit PIN</string>
+    <string name="pin_instruction_confirm_new">Confirm new PIN</string>
+    <string name="set_pin_button">Set PIN</string>
+    <string name="unlock_button">Unlock</string>
+    <string name="confirm_new_pin_button">Confirm New PIN</string>
+    <string name="pin_unexpected_setting_attempt">Unexpected PIN setting attempt.</string>
+    <string name="pin_set_or_changed_success">PIN %1$s successfully!</string>
+    <string name="pin_verb_set">set</string>
+    <string name="pin_verb_changed">changed</string>
+    <string name="pin_enter_to_unlock">Please enter PIN to unlock.</string>
+    <string name="pin_change_canceled">Canceled PIN change.</string>
+    <string name="pins_do_not_match">PINs do not match. Please try again.</string>
+
+    <string name="report_no_transactions">No transactions available to generate report.</string>
+    <string name="report_no_monthly_transactions">No transactions for the current month.</string>
+    <string name="report_no_weekly_transactions">No transactions for the last 7 days.</string>
+    <string name="report_monthly_income_expense_breakdown">Monthly Income vs Expense Breakdown</string>
+    <string name="report_monthly_income_expense">Monthly Income vs Expense</string>
+    <string name="report_weekly_income_expense_breakdown">Weekly Income vs Expense Breakdown</string>
+    <string name="report_weekly_income_expense">Weekly Income vs Expense</string>
+    <string name="report_income_vs_expense">Income vs Expense</string>
+    <string name="report_income_label">Income</string>
+    <string name="report_expense_label">Expense</string>
+
+    <string name="select_language_title">Select Language</string>
+    <string name="language_english">English</string>
+    <string name="language_bengali">বাংলা</string>
+    <string name="set_expense_threshold_title">Set Expense Threshold</string>
+    <string name="current_threshold_label">Current Threshold:</string>
+    <string name="enter_new_threshold_hint">Enter new threshold amount</string>
+    <string name="save_threshold_button">Save Threshold</string>
+    <string name="threshold_saved_success">Expense threshold saved: %1$s</string>
+    <string name="error_invalid_threshold_amount">Please enter a valid positive number for the threshold.</string>
+    <string name="high_expense_alert">High Expense Alert! A recent expense of %1$s in category \'%2$s\' exceeded the threshold of %3$s.</string>
+    <string name="switch_to_dark_theme">Switch to Dark Theme</string>
+    <string name="switch_to_light_theme">Switch to Light Theme</string>
+
+    <string name="dialog_reset_title">Reset Transactions?</string>
+    <string name="dialog_reset_message">Are you sure you want to delete all transactions? This action cannot be undone.</string>
+    <string name="dialog_reset_confirm">Delete All</string>
+    <string name="transactions_reset_success">All transactions have been reset.</string>
+
+    <string name="category_label">Category:</string>
+    <string name="uncategorized">Uncategorized</string>
+    <string name="category_food">Food</string>
+    <string name="category_transport">Transport</string>
+    <string name="category_utilities">Utilities</string>
+    <string name="category_salary">Salary</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_entertainment">Entertainment</string>
+    <string name="category_health">Health</string>
+    <string name="category_education">Education</string>
+    <string name="category_housing">Housing</string>
+    <string name="category_misc_expense">Miscellaneous Expense</string>
+    <string name="category_investment">Investment</string>
+    <string name="category_gift">Gift</string>
+    <string name="category_freelance">Freelance</string>
+    <string name="category_misc_income">Miscellaneous Income</string>
+
+    <string-array name="transaction_categories">
+        <item>@string/uncategorized</item>
+        <item>@string/category_food</item>
+        <item>@string/category_transport</item>
+        <item>@string/category_utilities</item>
+        <item>@string/category_salary</item>
+        <item>@string/category_shopping</item>
+        <item>@string/category_entertainment</item>
+        <item>@string/category_health</item>
+        <item>@string/category_education</item>
+        <item>@string/category_housing</item>
+        <item>@string/category_misc_expense</item>
+        <item>@string/category_investment</item>
+        <item>@string/category_gift</item>
+        <item>@string/category_freelance</item>
+        <item>@string/category_misc_income</item>
+    </string-array>
+
+    <string-array name="income_categories">
+        <item>@string/category_salary</item>
+        <item>@string/category_investment</item>
+        <item>@string/category_gift</item>
+        <item>@string/category_freelance</item>
+        <item>@string/category_misc_income</item>
+        <item>@string/uncategorized</item>
+    </string-array>
+
+    <string-array name="expense_categories">
+        <item>@string/category_food</item>
+        <item>@string/category_transport</item>
+        <item>@string/category_utilities</item>
+        <item>@string/category_shopping</item>
+        <item>@string/category_entertainment</item>
+        <item>@string/category_health</item>
+        <item>@string/category_education</item>
+        <item>@string/category_housing</item>
+        <item>@string>category_misc_expense</item>
+        <item>@string/uncategorized</item>
+    </string-array>
+</resources>

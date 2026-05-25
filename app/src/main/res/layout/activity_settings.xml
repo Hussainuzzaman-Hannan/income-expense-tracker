@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".SettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Settings Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_settings"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnPrimary"
+                android:layout_marginBottom="32dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Expense Threshold Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="?attr/colorPrimary"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/neumorphic_shape_convex">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_expense_threshold_title"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Current Threshold Display -->
+                    <TextView
+                        android:id="@+id/current_threshold_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_threshold_label"
+                        android:textSize="16sp"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- New Threshold Input with TextInputLayout -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        app:hintEnabled="true"
+                        app:hintTextColor="?attr/colorOnPrimary"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="?attr/colorOnPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/new_threshold_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/enter_new_threshold_hint"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="?attr/colorOnPrimary"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:padding="12dp"
+                            android:background="@drawable/neumorphic_input_background"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Save Threshold Button -->
+                    <Button
+                        android:id="@+id/save_threshold_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save_threshold_button"
+                        android:background="@drawable/neumorphic_button_income"
+                        android:textColor="@color/green_income"
+                        android:textStyle="bold"
+                        android:paddingVertical="12dp"
+                        style="?android:attr/buttonBarButtonStyle"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Other Settings Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="?attr/colorPrimary"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/neumorphic_shape_convex">
+
+                    <!-- Change PIN Button -->
+                    <Button
+                        android:id="@+id/btn_change_pin_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_change_pin"
+                        android:background="@drawable/neumorphic_button_income"
+                        android:textColor="@color/green_income"
+                        android:textStyle="bold"
+                        android:paddingVertical="12dp"
+                        android:layout_marginBottom="12dp"
+                        style="?android:attr/buttonBarButtonStyle"/>
+
+                    <!-- Change Language Button -->
+                    <Button
+                        android:id="@+id/btn_change_language_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_change_language"
+                        android:background="@drawable/neumorphic_button_income"
+                        android:textColor="@color/green_income"
+                        android:textStyle="bold"
+                        android:paddingVertical="12dp"
+                        android:layout_marginBottom="12dp"
+                        style="?android:attr/buttonBarButtonStyle"/>
+
+                    <!-- Theme Toggle Button -->
+                    <Button
+                        android:id="@+id/btn_toggle_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/switch_to_dark_theme"
+                        android:background="@drawable/neumorphic_button_income"
+                        android:textColor="@color/green_income"
+                        android:textStyle="bold"
+                        android:paddingVertical="12dp"
+                        style="?android:attr/buttonBarButtonStyle"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

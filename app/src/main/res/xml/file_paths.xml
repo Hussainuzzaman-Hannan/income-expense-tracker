@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define paths for files that your app needs to share via FileProvider. -->
+
+    <!-- This path grants access to files in your app's internal storage directory (files/).
+         Useful for sharing files created directly by your app, like JSON transaction data. -->
+    <files-path name="my_files" path="." />
+
+    <!-- This path grants access to files in your app's external files directory (on the device's external storage,
+         e.g., Android/data/com.your.package/files/). This is often used for exported documents. -->
+    <external-files-path name="external_files" path="." />
+
+    <!-- If you plan to share files from the cache directory -->
+    <!-- <cache-path name="my_cache" path="." /> -->
+
+    <!-- If you plan to share files from external cache directory -->
+    <!-- <external-cache-path name="external_cache" path="." /> -->
+
+    <!-- If you need to share a specific directory on external public storage (e.g., Downloads, Documents)
+         This requires WRITE_EXTERNAL_STORAGE permission on older Android versions, or SAF on newer ones.
+         For this app, ACTION_CREATE_DOCUMENT handles the user-selected location,
+         so explicitly exposing external-path here is generally not needed for PDF/CSV direct saving.
+         However, for sharing previously saved files from public directories, it might be. -->
+    <!-- <external-path name="external_root" path="." /> -->
+
+</paths>

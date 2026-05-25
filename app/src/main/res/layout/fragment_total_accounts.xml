@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/colorPrimary"
+    tools:context=".TotalAccountsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Summary Section - Neumorphism CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="?attr/colorPrimary"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="24dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/neumorphic_shape_convex">
+
+                <TextView
+                    android:id="@+id/summary_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summary_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Income Row -->
+                <LinearLayout android:id="@+id/total_income_label_layout" style="@style/SummaryRow">
+                    <TextView
+                        android:id="@+id/total_income_label"
+                        style="@style/SummaryLabel"
+                        android:text="@string/total_income_label"/>
+                    <TextView
+                        style="@style/SummaryValue"
+                        android:id="@+id/total_income_text_view"
+                        android:textColor="@color/green_income"
+                        tools:text="৳0.00"/>
+                </LinearLayout>
+                <!-- Expenses Row -->
+                <LinearLayout android:id="@+id/total_expenses_label_layout" style="@style/SummaryRow">
+                    <TextView
+                        android:id="@+id/total_expenses_label"
+                        style="@style/SummaryLabel"
+                        android:text="@string/total_expenses_label"/>
+                    <TextView
+                        style="@style/SummaryValue"
+                        android:id="@+id/total_expenses_text_view"
+                        android:textColor="@color/red_expense"
+                        tools:text="৳0.00"/>
+                </LinearLayout>
+                <!-- Balance Row -->
+                <LinearLayout android:id="@+id/balance_label_layout" style="@style/SummaryRow">
+                    <TextView
+                        android:id="@+id/balance_label"
+                        style="@style/SummaryLabel"
+                        android:text="@string/balance_label"/>
+                    <TextView
+                        style="@style/SummaryValue"
+                        android:id="@+id/balance_text_view"
+                        tools:text="৳0.00"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Pie Chart Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="?attr/colorPrimary"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="24dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/neumorphic_shape_convex">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report_expense_breakdown_title"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:layout_marginBottom="12dp"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/total_accounts_pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Developer Credits Section -->
+        <TextView
+            android:id="@+id/developed_by_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/developed_by_credits"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mdhussainuzzamanhannan@gmail.com"
+            android:textSize="14sp"
+            android:textColor="@color/blue_neutral"
+            android:autoLink="email"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+</ScrollView>

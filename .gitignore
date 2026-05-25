@@ -1,0 +1,65 @@
+# Gradle
+.gradle/
+build/
+
+# Local configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# Generated files
+captures/
+.externalNativeBuild/
+.cxx/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Kotlin
+*.class
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# APK files
+*.apk
+
+# Keystore files
+*.jks
+*.keystore
+
+# Navigation editor temp files
+.navigation/
+
+# Build outputs
+/app/build/
+
+# Generated
+/bin/
+/out/
+
+# Firebase
+google-services.json
+
+# NDK
+obj/
+
+# IntelliJ
+workspace.xml
+tasks.xml
+usage.statistics.xml
+dictionaries/
+shelf/
+
+# Mac
+*.swp
+
+# Windows
+desktop.ini

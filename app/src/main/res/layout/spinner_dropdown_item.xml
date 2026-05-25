@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Custom layout for spinner dropdown items to ensure black text color and proper click feedback for neumorphism -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:textColor="@color/black"
+    android:background="@drawable/spinner_item_selector_neumorphic"
+    android:foreground="?attr/selectableItemBackground"
+    android:textSize="16sp" />

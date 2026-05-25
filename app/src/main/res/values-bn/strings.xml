@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">আয়-ব্যয় ট্র্যাকার</string>
+
+    <string name="summary_title">সারাংশ</string>
+    <string name="total_income_label">মোট আয়:</string>
+    <string name="total_expenses_label">মোট ব্যয়:</string>
+    <string name="balance_label">ব্যালেন্স:</string>
+    <string name="add_transaction_title">লেনদেন যোগ করুন</string>
+    <string name="date_label">তারিখ:</string>
+    <string name="select_date_hint">তারিখ নির্বাচন করুন</string>
+    <string name="description_hint">বিবরণ</string>
+    <string name="amount_hint">পরিমাণ</string>
+    <string name="add_income_button">আয় যোগ করুন</string>
+    <string name="add_expense_button">ব্যয় যোগ করুন</string>
+    <string name="search_transactions_title">লেনদেন অনুসন্ধান করুন</string>
+    <string name="search_hint">মূলশব্দ বা তারিখ দ্বারা অনুসন্ধান করুন (dd/MM/yyyy)</string>
+    <string name="search_button">অনুসন্ধান করুন</string>
+    <string name="clear_search_button">অনুসন্ধান পরিষ্কার করুন</string>
+    <string name="transactions_title">লেনদেনসমূহ</string>
+    <string name="developed_by_credits">তৈরি করেছেন - মো: হুসাইনুজ্জামান হান্নান</string>
+
+    <string name="tab_total_accounts">মোট হিসাব</string>
+    <string name="tab_all_accounts">সকল হিসাব</string>
+
+    <string name="add_income_tab">আয়</string>
+    <string name="add_expense_tab">ব্যয়</string>
+    <string name="cancel_button">বাতিল করুন</string>
+    <string name="save_button">সংরক্ষণ করুন</string>
+    <string name="voice_input_description">বিবরণের জন্য ভয়েস ইনপুট</string>
+    <string name="voice_input_amount">পরিমাণের জন্য ভয়েস ইনপুট</string>
+    <string name="delete_transaction_description">লেনদেন মুছে ফেলুন</string>
+    <string name="add_new_transaction_description">নতুন লেনদেন যোগ করুন</string>
+    <string name="calculator_button_description">ক্যালকুলেটর খুলুন</string>
+    <string name="menu_button_description">মেনু খুলুন</string>
+    <string name="share_button_description">রিপোর্ট শেয়ার করুন</string>
+    <string name="report_expense_breakdown_title">ব্যয় বিশ্লেষণ</string>
+    <string name="transaction_add_cancelled">লেনদেন যোগ করা বাতিল হয়েছে।</string>
+    <string name="transaction_added_success">লেনদেন সফলভাবে যোগ করা হয়েছে!</string>
+    <string name="transaction_updated_success">লেনদেন সফলভাবে আপডেট করা হয়েছে!</string>
+
+    <string name="speech_listening">শুনছি…</string>
+    <string name="speech_processing">শব্দ প্রক্রিয়া করা হচ্ছে…</string>
+    <string name="speech_error_audio">অডিও রেকর্ডিং ত্রুটি।</string>
+    <string name="speech_error_client">ক্লায়েন্ট সাইড ত্রুটি।</string>
+    <string name="speech_error_insufficient_permissions">অপর্যাপ্ত অনুমতি।</string>
+    <string name="speech_error_network">নেটওয়ার্ক ত্রুটি।</string>
+    <string name="speech_error_network_timeout">নেটওয়ার্ক টাইমআউট।</string>
+    <string name="speech_error_no_match">কোনো শব্দ শনাক্ত করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+    <string name="speech_error_recognizer_busy">শনাক্তকরণ পরিষেবা ব্যস্ত।</string>
+    <string name="speech_error_server">সার্ভার ত্রুটি।</string>
+    <string name="speech_error_speech_timeout">কোনো ভয়েস ইনপুট নেই।</string>
+    <string name="speech_error_unknown">অজানা শব্দ ত্রুটি।</string>
+    <string name="speech_recognition_error_prefix">ভয়েস শনাক্তকরণ ত্রুটি: %1$s</string>
+    <string name="permission_denied_voice_input">অডিও রেকর্ডিং অনুমতি অস্বীকার করা হয়েছে। ভয়েস ইনপুট কাজ করবে না।</string>
+    <string name="error_enter_description">অনুগ্রহ করে একটি বিবরণ লিখুন।</string>
+    <string name="error_valid_positive_amount">অনুগ্রহ করে একটি বৈধ ধনাত্মক পরিমাণ লিখুন।</string>
+    <string name="transaction_deleted">লেনদেন মুছে ফেলা হয়েছে।</string>
+    <string name="no_transactions_found">\'%1$s\' এর জন্য কোনো লেনদেন পাওয়া যায়নি।</string>
+    <string name="no_transactions_yet">এখনো কোনো লেনদেন যোগ করা হয়নি।</string>
+    <string name="search_cleared">অনুসন্ধান পরিষ্কার করা হয়েছে। সকল লেনদেন দেখানো হচ্ছে।</string>
+    <string name="balance_exceeded_limit">অভিনন্দন! আপনার ব্যালেন্স ৳%1$d অতিক্রম করেছে!</string>
+    <string name="balance_negative_warning">সতর্কবাণী: আপনার ব্যালেন্স ঋণাত্মক!</string>
+    <string name="error_saving_transactions">লেনদেন সংরক্ষণ করতে ত্রুটি: %1$s</string>
+    <string name="error_loading_transactions">লেনদেন লোড করতে ত্রুটি: %1$s</string>
+    <string name="file_export_cancelled">ফাইল রপ্তানি বাতিল হয়েছে।</string>
+    <string name="csv_export_success">লেনদেন সফলভাবে CSV তে রপ্তানি হয়েছে!</string>
+    <string name="error_exporting_csv">CSV রপ্তানি করতে ত্রুটি: %1$s</string>
+    <string name="pdf_export_success">লেনদেন সফলভাবে PDF তে রপ্তানি হয়েছে!</string>
+    <string name="error_exporting_pdf">PDF রপ্তানি করতে ত্রুটি: %1$s</string>
+    <string name="transaction_type_label">ধরণ</string>
+    <string name="transaction_category_label">শ্রেণী</string>
+
+    <string name="menu_settings">সেটিংস</string>
+    <string name="menu_about">সম্পর্কে</string>
+    <string name="menu_monthly_report">মাসিক রিপোর্ট</string>
+    <string name="menu_weekly_report">সাপ্তাহিক রিপোর্ট</string>
+    <string name="menu_change_pin">পিন পরিবর্তন করুন</string>
+    <string name="menu_export_csv">CSV তে রপ্তানি করুন</string>
+    <string name="menu_export_pdf">PDF তে রপ্তানি করুন</string>
+    <string name="menu_change_language">ভাষা পরিবর্তন করুন</string>
+    <string name="menu_reset_transactions">সকল লেনদেন রিসেট করুন</string>
+    <string name="menu_debt_receivables">ঋণ ও পাওনা</string>
+
+    <string name="debt_receivables_under_construction">ঋণ ও পাওনা বিভাগটি নির্মাণাধীন।</string>
+
+    <string name="settings_clicked_message">সেটিংসে ক্লিক করা হয়েছে!</string>
+    <string name="about_clicked_message">সম্পর্কে ক্লিক করা হয়েছে!</string>
+
+    <string name="pin_instruction_enter">আপনার পিন প্রবেশ করান</string>
+    <string name="pin_hint">পিন</string>
+    <string name="confirm_button">নিশ্চিত করুন</string>
+    <string name="pin_not_set_message">কোন পিন সেট করা হয়নি। অনুগ্রহ করে একটি নতুন পিন সেট করুন।</string>
+    <string name="set_new_pin_button">নতুন পিন সেট করুন</string>
+    <string name="pin_length_error">পিন অবশ্যই ৪ সংখ্যার হতে হবে।</string>
+    <string name="pin_correct_unlocking">পিন সঠিক। অ্যাপ আনলক হচ্ছে…</string>
+    <string name="pin_incorrect">ভুল পিন। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+    <string name="pin_instruction_set">একটি ৪-সংখ্যার পিন সেট করুন</string>
+    <string name="pin_instruction_confirm_new">নতুন পিন নিশ্চিত করুন</string>
+    <string name="set_pin_button">পিন সেট করুন</string>
+    <string name="unlock_button">আনলক করুন</string>
+    <string name="confirm_new_pin_button">নতুন পিন নিশ্চিত করুন</string>
+    <string name="pin_unexpected_setting_attempt">অপ্রত্যাশিত পিন সেটিং প্রচেষ্টা।</string>
+    <string name="pin_set_or_changed_success">পিন সফলভাবে %1$s হয়েছে!</string>
+    <string name="pin_verb_set">সেট</string>
+    <string name="pin_verb_changed">পরিবর্তিত</string>
+    <string name="pin_enter_to_unlock">আনলক করতে পিন প্রবেশ করান।</string>
+    <string name="pin_change_canceled">পিন পরিবর্তন বাতিল হয়েছে।</string>
+    <string name="pins_do_not_match">পিনগুলো মিলছে না। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+
+    <string name="report_no_transactions">রিপোর্ট তৈরি করার জন্য কোনো লেনদেন উপলব্ধ নেই।</string>
+    <string name="report_no_monthly_transactions">চলতি মাসের জন্য কোনো লেনদেন নেই।</string>
+    <string name="report_no_weekly_transactions">গত ৭ দিনের জন্য কোনো লেনদেন নেই।</string>
+    <string name="report_monthly_income_expense_breakdown">মাসিক আয় বনাম ব্যয় বিশ্লেষণ</string>
+    <string name="report_monthly_income_expense">মাসিক আয় বনাম ব্যয়</string>
+    <string name="report_weekly_income_expense_breakdown">সাপ্তাহিক আয় বনাম ব্যয় বিশ্লেষণ</string>
+    <string name="report_weekly_income_expense">সাপ্তাহিক আয় বনাম ব্যয়</string>
+    <string name="report_income_vs_expense">আয় বনাম ব্যয়</string>
+    <string name="report_income_label">আয়</string>
+    <string name="report_expense_label">ব্যয়</string>
+
+    <string name="select_language_title">ভাষা নির্বাচন করুন</string>
+    <string name="language_english">English</string>
+    <string name="language_bengali">বাংলা</string>
+    <string name="set_expense_threshold_title">ব্যয় সীমা নির্ধারণ করুন</string>
+    <string name="current_threshold_label">বর্তমান সীমা:</string>
+    <string name="enter_new_threshold_hint">নতুন সীমা পরিমাণ লিখুন</string>
+    <string name="save_threshold_button">সীমা সংরক্ষণ করুন</string>
+    <string name="threshold_saved_success">ব্যয় সীমা সংরক্ষিত: %1$s</string>
+    <string name="error_invalid_threshold_amount">অনুগ্রহ করে সীমার জন্য একটি বৈধ ধনাত্মক সংখ্যা লিখুন।</string>
+    <string name="high_expense_alert">উচ্চ ব্যয় সতর্কতা! \'%2$s\' ক্যাটাগরিতে %1$s এর সাম্প্রতিক ব্যয় %3$s এর সীমা অতিক্রম করেছে।</string>
+    <string name="switch_to_dark_theme">ডার্ক থিমে স্যুইচ করুন</string>
+    <string name="switch_to_light_theme">লাইট থিমে স্যুইচ করুন</string>
+
+    <string name="dialog_reset_title">লেনদেন রিসেট করবেন?</string>
+    <string name="dialog_reset_message">আপনি কি নিশ্চিত যে আপনি সমস্ত লেনদেন মুছে ফেলতে চান? এই ক্রিয়াটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
+    <string name="dialog_reset_confirm">সব মুছে ফেলুন</string>
+    <string name="transactions_reset_success">সকল লেনদেন রিসেট করা হয়েছে।</string>
+
+    <string name="category_label">শ্রেণী:</string>
+    <string name="uncategorized">অশ্রেণীবদ্ধ</string>
+    <string name="category_food">খাদ্য</string>
+    <string name="category_transport">পরিবহন</string>
+    <string name="category_utilities">ইউটিলিটি</string>
+    <string name="category_salary">বেতন</string>
+    <string name="category_shopping">কেনাকাটা</string>
+    <string name="category_entertainment">বিনোদন</string>
+    <string name="category_health">স্বাস্থ্য</string>
+    <string name="category_education">শিক্ষা</string>
+    <string name="category_housing">আবাসন</string>
+    <string name="category_misc_expense">বিবিধ ব্যয়</string>
+    <string name="category_investment">বিনিয়োগ</string>
+    <string name="category_gift">উপহার</string>
+    <string name="category_freelance">ফ্রিল্যান্স</string>
+    <string name="category_misc_income">বিবিধ আয়</string>
+
+    <string-array name="transaction_categories">
+        <item>@string/uncategorized</item>
+        <item>@string/category_food</item>
+        <item>@string/category_transport</item>
+        <item>@string/category_utilities</item>
+        <item>@string/category_salary</item>
+        <item>@string/category_shopping</item>
+        <item>@string/category_entertainment</item>
+        <item>@string/category_health</item>
+        <item>@string/category_education</item>
+        <item>@string/category_housing</item>
+        <item>@string/category_misc_expense</item>
+        <item>@string/category_investment</item>
+        <item>@string/category_gift</item>
+        <item>@string/category_freelance</item>
+        <item>@string/category_misc_income</item>
+    </string-array>
+
+    <string-array name="income_categories">
+        <item>@string/category_salary</item>
+        <item>@string/category_investment</item>
+        <item>@string/category_gift</item>
+        <item>@string/category_freelance</item>
+        <item>@string/category_misc_income</item>
+        <item>@string/uncategorized</item>
+    </string-array>
+
+    <string-array name="expense_categories">
+        <item>@string/category_food</item>
+        <item>@string/category_transport</item>
+        <item>@string/category_utilities</item>
+        <item>@string/category_shopping</item>
+        <item>@string/category_entertainment</item>
+        <item>@string/category_health</item>
+        <item>@string/category_education</item>
+        <item>@string/category_housing</item>
+        <item>@string/category_misc_expense</item>
+        <item>@string/uncategorized</item>
+    </string-array>
+</resources>

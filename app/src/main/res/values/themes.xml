@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for Day/Night mode. -->
+    <style name="Theme.IncomeExpenseTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color (for neumorphism, typically the background color) -->
+        <item name="colorPrimary">@color/neumorphic_background</item>
+        <item name="colorPrimaryVariant">@color/neumorphic_dark_shadow</item>
+        <item name="colorOnPrimary">@color/black</item> <!-- Text color on primary background -->
+
+        <!-- Secondary brand color (for accents like FABs or progress indicators) -->
+        <item name="colorSecondary">@color/blue_neutral</item>
+        <item name="colorSecondaryVariant">@color/blue_neutral</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Ensure text/icons on status bar are dark for a light status bar background -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <!-- Background color of views -->
+        <item name="android:colorBackground">@color/neumorphic_background</item>
+
+        <!-- Default text color -->
+        <item name="android:textColor">@color/black</item>
+
+        <!-- Custom style for Spinner text -->
+        <item name="spinnerStyle">@style/SpinnerStyle</item>
+
+        <!-- Custom tab layout style for neumorphism -->
+        <item name="tabStyle">@style/NeumorphicTabStyle</item>
+
+    </style>
+
+    <!-- Custom style for Spinners, specifically for the text color of the selected item -->
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Style for TabLayout to match neumorphic design -->
+    <style name="NeumorphicTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/blue_neutral</item>
+        <item name="tabSelectedTextColor">@color/black</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabBackground">@drawable/tab_neumorphic_selector</item>
+    </style>
+
+    <!-- Theme for a full-screen dialog, often used for add/edit forms -->
+    <style name="FullScreenDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/neumorphic_background</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowAnimationStyle">@style/FullScreenDialogAnimation</item>
+        <!-- Ensure colors are consistent with your main app theme -->
+        <item name="colorPrimary">@color/neumorphic_background</item>
+        <item name="colorPrimaryVariant">@color/neumorphic_dark_shadow</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/blue_neutral</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <!-- Animation for the full-screen dialog -->
+    <style name="FullScreenDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!-- Custom Style for Summary Rows -->
+    <style name="SummaryRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!-- Custom Style for Summary Labels -->
+    <style name="SummaryLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- Custom Style for Summary Values -->
+    <style name="SummaryValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

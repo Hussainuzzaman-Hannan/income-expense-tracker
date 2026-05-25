@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Main shape for the button base -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/neumorphic_background" />
+            <corners android:radius="999dp" /> <!-- Makes it a perfect circle -->
+        </shape>
+    </item>
+
+    <!-- Outer Top-Left Shadow -->
+    <item android:right="2dp" android:bottom="2dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="@color/neumorphic_light_shadow"
+                android:endColor="@android:color/transparent"
+                android:type="radial"
+                android:gradientRadius="300%"/>
+            <corners android:radius="999dp" />
+        </shape>
+    </item>
+
+    <!-- Outer Bottom-Right Shadow -->
+    <item android:left="2dp" android:top="2dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="@color/neumorphic_dark_shadow"
+                android:endColor="@android:color/transparent"
+                android:type="radial"
+                android:gradientRadius="300%"/>
+            <corners android:radius="999dp" />
+        </shape>
+    </item>
+
+    <!-- Inner Highlight (for convex effect) -->
+    <item android:right="1dp" android:bottom="1dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/neumorphic_light_highlight" />
+            <corners android:radius="999dp" />
+        </shape>
+    </item>
+
+</layer-list>

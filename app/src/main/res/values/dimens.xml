@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spinner_dropdown_vertical_offset">56dp</dimen> <!-- Offset for spinner dropdown to appear correctly below the selected item -->
+</resources>

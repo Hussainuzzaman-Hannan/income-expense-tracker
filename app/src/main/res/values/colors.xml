@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Neumorphism Base Colors (Light Theme) -->
+    <color name="neumorphic_background">#E0E0E0</color> <!-- A light, soft gray base -->
+    <color name="neumorphic_light_shadow">#FFFFFF</color> <!-- For highlight/top-left shadow -->
+    <color name="neumorphic_dark_shadow">#C8C8C8</color> <!-- For dark/bottom-right shadow -->
+    <color name="neumorphic_light_highlight">#F0F0F0</color> <!-- Slightly brighter than background for highlight -->
+
+    <!-- Text Colors (Light Theme) -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color> <!-- Text is black in light mode -->
+
+    <!-- Transaction Type Colors - adjusted for contrast on light background -->
+    <color name="green_income">#4CAF50</color> <!-- A slightly darker green for better contrast -->
+    <color name="red_expense">#F44336</color> <!-- A slightly darker red for better contrast -->
+
+    <!-- NEW: Neumorphic shades for Green Income Button -->
+    <color name="green_income_light_shadow">#7CB342</color> <!-- Lighter green for button highlight (used in neumorphic_button_income) -->
+    <color name="green_income_dark_shadow">#388E3C</color> <!-- Darker green for button shadow (used in neumorphic_button_income) -->
+
+    <!-- NEW: Neumorphic shades for Red Expense Button -->
+    <color name="red_expense_light_shadow">#FF8A65</color> <!-- Lighter red for button highlight (used in neumorphic_button_expense) -->
+    <color name="red_expense_dark_shadow">#D32F2F</color> <!-- Darker red for button shadow (used in neumorphic_button_expense) -->
+
+    <!-- Balance Colors based on value - adjusted for contrast -->
+    <color name="green_positive">#4CAF50</color>
+    <color name="red_negative">#F44336</color>
+    <color name="blue_neutral">#2196F3</color> <!-- A standard blue for neutral -->
+
+    <!-- Chart Colors (Specific colors can be defined here or dynamically generated in Kotlin) -->
+    <color name="chart_color_1">#FF6347</color> <!-- Tomato (Red-Expense for Pie) -->
+    <color name="chart_color_2">#FFD700</color> <!-- Gold (Yellow) -->
+    <color name="chart_color_3">#8A2BE2</color> <!-- Blue Violet (Purple) -->
+    <color name="chart_color_4">#3CB371</color> <!-- Medium Sea Green (Green) -->
+    <color name="chart_color_5">#ADD8E6</color> <!-- Light Blue -->
+    <color name="chart_color_6">#FFA07A</color> <!-- Light Salmon -->
+    <color name="chart_color_7">#C0C0C0</color> <!-- Silver -->
+    <color name="chart_color_8">#DA70D6</color> <!-- Orchid -->
+
+</resources>

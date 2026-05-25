@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for the Add Transaction DialogFragment, which contains tabs for Income and Expense. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    android:padding="0dp"
+    tools:context=".AddTransactionDialogFragment">
+
+    <!-- Top Bar within Dialog (Optional, for close button or title) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_transaction_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnPrimary"
+            android:gravity="center"/>
+
+        <!-- Close button if needed, otherwise rely on dialog dismissal -->
+        <!-- <ImageButton
+            android:id="@+id/dialog_close_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="?attr/colorOnPrimary"
+            android:contentDescription="@string/cancel_button"
+            android:scaleType="fitCenter"/> -->
+
+    </LinearLayout>
+
+    <!-- TabLayout for Income/Expense tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/dialog_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_neumorphic_selector"
+        app:tabSelectedTextColor="?attr/colorOnPrimary"
+        app:tabTextColor="?attr/colorOnPrimary"
+        app:tabIndicatorColor="?attr/colorSecondary"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="?attr/colorPrimary"/>
+
+    <!-- ViewPager2 to host the fragments for each tab content -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/dialog_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:background="?attr/colorPrimary"/>
+
+</LinearLayout>

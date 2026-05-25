@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Neumorphism Base Colors (Dark Theme) -->
+    <color name="neumorphic_background">#2C2C2C</color> <!-- Dark gray base -->
+    <color name="neumorphic_light_shadow">#3F3F3F</color> <!-- Slightly lighter dark gray for highlight -->
+    <color name="neumorphic_dark_shadow">#1A1A1A</color> <!-- Slightly darker dark gray for dark shadow -->
+    <color name="neumorphic_light_highlight">#424242</color> <!-- Slightly brighter than background for highlight (for dark mode) -->
+
+    <!-- Text Colors (Dark Theme) -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#FFFFFF</color> <!-- Text is white in dark mode -->
+
+    <!-- Transaction Type Colors - adjusted for contrast on dark background -->
+    <color name="green_income">#8BC34A</color> <!-- Lighter green for dark background -->
+    <color name="red_expense">#EF5350</color> <!-- Lighter red for dark background -->
+
+    <!-- NEW: Neumorphic shades for Green Income Button (Dark Theme) -->
+    <color name="green_income_light_shadow">#A5D6A7</color> <!-- Lighter green for button highlight -->
+    <color name="green_income_dark_shadow">#689F38</color> <!-- Darker green for button shadow -->
+
+    <!-- NEW: Neumorphic shades for Red Expense Button (Dark Theme) -->
+    <color name="red_expense_light_shadow">#FFCDD2</color> <!-- Lighter red for button highlight -->
+    <color name="red_expense_dark_shadow">#C62828</color> <!-- Darker red for button shadow -->
+
+    <!-- Balance Colors based on value - adjusted for contrast -->
+    <color name="green_positive">#8BC34A</color>
+    <color name="red_negative">#EF5350</color>
+    <color name="blue_neutral">#64B5F6</color> <!-- Lighter blue for neutral on dark background -->
+
+    <!-- Chart Colors (adjust for dark theme visibility if applicable) -->
+    <color name="chart_color_1">#FF8A65</color>
+    <color name="chart_color_2">#FFEB3B</color>
+    <color name="chart_color_3">#BA68C8</color>
+    <color name="chart_color_4">#66BB6A</color>
+    <color name="chart_color_5">#81D4FA</color>
+    <color name="chart_color_6">#FFCCBC</color>
+    <color name="chart_color_7">#BDBDBD</color>
+    <color name="chart_color_8">#E1BEE7</color>
+
+</resources>
