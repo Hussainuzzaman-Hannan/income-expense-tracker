@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Dark mode overrides -->
+    <style name="Theme.IncomeExpenseTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/neumorphic_background</item>
+        <item name="colorPrimaryVariant">@color/neumorphic_dark_shadow</item>
+        <item name="colorOnPrimary">@color/black</item><!-- night/colors.xml এ black=#FFFFFF -->
+
+        <item name="colorSecondary">@color/blue_neutral</item>
+        <item name="colorSecondaryVariant">@color/blue_neutral</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Dark mode: status bar dark, icons light -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/neumorphic_dark_shadow</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <item name="android:colorBackground">@color/neumorphic_background</item>
+        <item name="android:textColor">@color/black</item><!-- night এ black=white -->
+
+        <item name="spinnerStyle">@style/SpinnerStyle</item>
+        <item name="tabStyle">@style/NeumorphicTabStyle</item>
+    </style>
+
+    <!-- Dark mode Spinner -->
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/black</item><!-- night এ black=white -->
+    </style>
+
+    <!-- Dark mode TabLayout -->
+    <style name="NeumorphicTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/blue_neutral</item>
+        <item name="tabSelectedTextColor">@color/black</item><!-- night এ black=white -->
+        <item name="tabTextColor">@color/black</item><!-- night এ black=white -->
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabBackground">@drawable/tab_neumorphic_selector</item>
+    </style>
+
+    <!-- Dark mode FullScreenDialog -->
+    <style name="FullScreenDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/neumorphic_background</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowAnimationStyle">@style/FullScreenDialogAnimation</item>
+        <item name="colorPrimary">@color/neumorphic_background</item>
+        <item name="colorPrimaryVariant">@color/neumorphic_dark_shadow</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/blue_neutral</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/neumorphic_dark_shadow</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+</resources>

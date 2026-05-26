@@ -126,7 +126,7 @@ class PinEntryActivity : AppCompatActivity() {
         else if (!isSettingNewPin) { // PIN exists and not in "setting new pin" mode
             pinInstructionText.text = getString(R.string.pin_instruction_enter)
             setPinText.visibility = View.GONE
-            setNewPinButton.visibility = View.VISIBLE // Option to change PIN
+            setNewPinButton.visibility = View.GONE // PIN change শুধু MainActivity মেনু থেকে
             confirmPinButton.text = getString(R.string.unlock_button)
         }
         // Scenario 3: PIN is set, and user is in the process of changing it (triggered by setNewPinButton)

@@ -40,7 +40,7 @@ class DebtReceivablesActivity : AppCompatActivity() {
     private lateinit var adapter: DebtAdapter
     private val gson = Gson()
     private val FILE_NAME = "debt_entries.json"
-    private val currencyFormatter = NumberFormat.getCurrencyInstance(Locale("bn", "BD"))
+    private lateinit var currencyFormatter: NumberFormat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,6 +67,10 @@ class DebtReceivablesActivity : AppCompatActivity() {
 
         backButton.setOnClickListener { finish() }
         fabAdd.setOnClickListener { showAddDialog() }
+
+        val langCode = getSharedPreferences("app_prefs", MODE_PRIVATE)
+            .getString("app_language", "en") ?: "en"
+        currencyFormatter = NumberFormat.getCurrencyInstance(Locale(langCode, "BD"))
 
         loadEntries()
         updateUI()
@@ -157,7 +161,11 @@ class DebtAdapter(
     private val onDelete: (DebtEntry) -> Unit
 ) : RecyclerView.Adapter<DebtAdapter.ViewHolder>() {
 
-    private val currencyFormatter = NumberFormat.getCurrencyInstance(Locale("bn", "BD"))
+    private fun getCurrencyFormatter(context: android.content.Context): NumberFormat {
+        val langCode = context.getSharedPreferences("app_prefs", android.content.Context.MODE_PRIVATE)
+            .getString("app_language", "en") ?: "en"
+        return NumberFormat.getCurrencyInstance(Locale(langCode, "BD"))
+    }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nameText: TextView = view.findViewById(R.id.debt_item_name)
@@ -176,7 +184,7 @@ class DebtAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val entry = entries[position]
         holder.nameText.text = entry.personName
-        holder.amountText.text = currencyFormatter.format(entry.amount)
+        holder.amountText.text = getCurrencyFormatter(holder.itemView.context).format(entry.amount)
         holder.noteText.text = entry.note.ifEmpty { "-" }
 
         if (entry.type == DebtType.I_OWE) {

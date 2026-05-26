@@ -217,4 +217,7 @@
         <item>@string/category_misc_expense</item>
         <item>@string/uncategorized</item>
     </string-array>
+    <!-- PIN verification before change -->
+    <string name="pin_verify_current_title">Verify Current PIN</string>
+    <string name="pin_verify_current_message">Enter your current PIN to continue</string>
 </resources>

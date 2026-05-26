@@ -24,6 +24,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -86,6 +87,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var allAccountsFragment: AllAccountsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Theme apply করো — super.onCreate() এর আগে
+        val savedTheme = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
+            .getInt("app_theme", AppCompatDelegate.MODE_NIGHT_NO)
+        AppCompatDelegate.setDefaultNightMode(savedTheme)
+
         val languageCode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE).getString(LANGUAGE_KEY, "en")
         languageCode?.let { setLocale(this, it) }
 

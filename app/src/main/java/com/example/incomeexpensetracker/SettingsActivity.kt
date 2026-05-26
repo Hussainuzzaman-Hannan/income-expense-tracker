@@ -110,27 +110,23 @@ class SettingsActivity : AppCompatActivity() {
      * Toggles between light and dark theme and saves the preference.
      */
     private fun toggleAppTheme() {
-        val currentNightMode = AppCompatDelegate.getDefaultNightMode()
-        val newNightMode = when (currentNightMode) {
-            AppCompatDelegate.MODE_NIGHT_YES -> AppCompatDelegate.MODE_NIGHT_NO // Currently Dark, switch to Light
-            else -> AppCompatDelegate.MODE_NIGHT_YES // Currently Light or System, switch to Dark
-        }
+        // SharedPreferences থেকে বর্তমান theme পড়ো (getDefaultNightMode নয়, এটা reliable নয়)
+        val currentNightMode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
+            .getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_NO)
 
-        // Save the new theme preference
+        val newNightMode = if (currentNightMode == AppCompatDelegate.MODE_NIGHT_YES)
+            AppCompatDelegate.MODE_NIGHT_NO
+        else
+            AppCompatDelegate.MODE_NIGHT_YES
+
+        // নতুন theme save করো
         getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE).edit()
             .putInt(THEME_KEY, newNightMode)
             .apply()
 
-        // Apply the new theme
+        // Theme apply করো তারপর শুধু recreate() — startActivity() নয়
         AppCompatDelegate.setDefaultNightMode(newNightMode)
-
-        // Recreate the activity to apply theme changes immediately
         recreate()
-
-        // Also, finish and restart MainActivity to ensure theme is applied there
-        val intent = Intent(this, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)
     }
 
     /**
