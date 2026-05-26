@@ -40,6 +40,12 @@ class ReportsActivity : AppCompatActivity() {
         const val EXTRA_REPORT_TYPE = "extra_report_type"
     }
 
+    // Dark mode-এ সাদা, light mode-এ কালো — theme অনুযায়ী chart text color
+    private fun chartTextColor(): Int {
+        val nightMode = resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK
+        return if (nightMode == android.content.res.Configuration.UI_MODE_NIGHT_YES) Color.WHITE else chartTextColor()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         // Apply saved language before super.onCreate()
         val languageCode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE).getString(LANGUAGE_KEY, "en")
@@ -148,7 +154,7 @@ class ReportsActivity : AppCompatActivity() {
         val pieDataSet = PieDataSet(pieEntries, "")
         pieDataSet.colors = colors
         pieDataSet.valueTextSize = 12f
-        pieDataSet.valueTextColor = Color.BLACK
+        pieDataSet.valueTextColor = chartTextColor()
         // Formatter for BDT
         pieDataSet.valueFormatter = object : com.github.mikephil.charting.formatter.ValueFormatter() {
             override fun getFormattedValue(value: Float): String {
@@ -160,14 +166,14 @@ class ReportsActivity : AppCompatActivity() {
         pieChart.data = pieData
         pieChart.description.text = chartTitle
         pieChart.description.textSize = 14f
-        pieChart.description.textColor = Color.BLACK
+        pieChart.description.textColor = chartTextColor()
         pieChart.centerText = getString(R.string.report_income_vs_expense)
         pieChart.setCenterTextSize(16f)
-        pieChart.setCenterTextColor(Color.BLACK)
+        pieChart.setCenterTextColor(chartTextColor())
         // If you want percentages along with values on slices, enable this line and add PercentFormatter
         // pieChart.setUsePercentValues(true)
         // pieDataSet.valueFormatter = PercentFormatter(pieChart)
-        pieChart.setEntryLabelColor(Color.BLACK)
+        pieChart.setEntryLabelColor(chartTextColor())
         pieChart.setEntryLabelTextSize(10f)
 
 
@@ -179,7 +185,7 @@ class ReportsActivity : AppCompatActivity() {
         legend.xEntrySpace = 7f
         legend.yEntrySpace = 0f
         legend.yOffset = 0f
-        legend.textColor = Color.BLACK
+        legend.textColor = chartTextColor()
         legend.textSize = 10f
 
         pieChart.animateY(1000)
@@ -227,7 +233,7 @@ class ReportsActivity : AppCompatActivity() {
 
         val incomeDataSet = BarDataSet(incomeEntries, getString(R.string.report_income_label))
         incomeDataSet.color = resources.getColor(R.color.green_income, theme)
-        incomeDataSet.valueTextColor = Color.BLACK
+        incomeDataSet.valueTextColor = chartTextColor()
         incomeDataSet.valueTextSize = 10f
         incomeDataSet.valueFormatter = object : com.github.mikephil.charting.formatter.ValueFormatter() {
             override fun getFormattedValue(value: Float): String {
@@ -238,7 +244,7 @@ class ReportsActivity : AppCompatActivity() {
 
         val expenseDataSet = BarDataSet(expenseEntries, getString(R.string.report_expense_label))
         expenseDataSet.color = resources.getColor(R.color.red_expense, theme)
-        expenseDataSet.valueTextColor = Color.BLACK
+        expenseDataSet.valueTextColor = chartTextColor()
         expenseDataSet.valueTextSize = 10f
         expenseDataSet.valueFormatter = object : com.github.mikephil.charting.formatter.ValueFormatter() {
             override fun getFormattedValue(value: Float): String {
@@ -250,7 +256,7 @@ class ReportsActivity : AppCompatActivity() {
         barChart.data = barData
         barChart.description.text = chartTitle
         barChart.description.textSize = 14f
-        barChart.description.textColor = Color.BLACK
+        barChart.description.textColor = chartTextColor()
         barChart.setDrawValueAboveBar(true)
         barChart.setFitBars(true)
 
@@ -262,12 +268,12 @@ class ReportsActivity : AppCompatActivity() {
         xAxis.setDrawAxisLine(true)
         xAxis.granularity = 1f
         xAxis.labelRotationAngle = -45f
-        xAxis.textColor = Color.BLACK
+        xAxis.textColor = chartTextColor()
         xAxis.textSize = 10f
 
         // Y-axis styling
         val leftAxis = barChart.axisLeft
-        leftAxis.textColor = Color.BLACK
+        leftAxis.textColor = chartTextColor()
         leftAxis.textSize = 10f
         val rightAxis = barChart.axisRight
         rightAxis.isEnabled = false
@@ -281,7 +287,7 @@ class ReportsActivity : AppCompatActivity() {
         legend.xEntrySpace = 7f
         legend.yEntrySpace = 0f
         legend.yOffset = 0f
-        legend.textColor = Color.BLACK
+        legend.textColor = chartTextColor()
         legend.textSize = 10f
 
         // Grouped Bar Chart settings

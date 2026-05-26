@@ -37,7 +37,7 @@ class SettingsActivity : AppCompatActivity() {
         val languageCode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE).getString(LANGUAGE_KEY, "en")
         languageCode?.let { setLocale(this, it) }
 
-        val savedThemeMode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE).getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        val savedThemeMode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE).getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_YES)
         AppCompatDelegate.setDefaultNightMode(savedThemeMode)
 
         super.onCreate(savedInstanceState)
@@ -112,7 +112,7 @@ class SettingsActivity : AppCompatActivity() {
     private fun toggleAppTheme() {
         // SharedPreferences থেকে বর্তমান theme পড়ো (getDefaultNightMode নয়, এটা reliable নয়)
         val currentNightMode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
-            .getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_NO)
+            .getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_YES)
 
         val newNightMode = if (currentNightMode == AppCompatDelegate.MODE_NIGHT_YES)
             AppCompatDelegate.MODE_NIGHT_NO

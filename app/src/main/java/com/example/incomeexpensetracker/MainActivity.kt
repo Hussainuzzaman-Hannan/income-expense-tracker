@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // Theme apply করো — super.onCreate() এর আগে
         val savedTheme = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
-            .getInt("app_theme", AppCompatDelegate.MODE_NIGHT_NO)
+            .getInt("app_theme", AppCompatDelegate.MODE_NIGHT_YES)
         AppCompatDelegate.setDefaultNightMode(savedTheme)
 
         val languageCode = getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE).getString(LANGUAGE_KEY, "en")

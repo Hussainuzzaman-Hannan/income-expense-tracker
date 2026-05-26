@@ -56,7 +56,13 @@ class TotalAccountsFragment : Fragment() {
         Log.d("TotalAccountsFragment", "onViewCreated: UI elements initialized.")
     }
 
+    private fun chartTextColor(): Int {
+        val nightMode = resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK
+        return if (nightMode == android.content.res.Configuration.UI_MODE_NIGHT_YES) Color.WHITE else Color.BLACK
+    }
+
     private fun setupPieChart() {
+        val textColor = chartTextColor()
         pieChart.apply {
             setUsePercentValues(true)
             description.isEnabled = false
@@ -64,24 +70,24 @@ class TotalAccountsFragment : Fragment() {
             dragDecelerationFrictionCoef = 0.95f
             isDrawHoleEnabled = true
             setHoleColor(Color.TRANSPARENT)
-            setTransparentCircleColor(Color.WHITE)
+            setTransparentCircleColor(Color.TRANSPARENT)
             setTransparentCircleAlpha(110)
             holeRadius = 45f
             transparentCircleRadius = 50f
             setDrawCenterText(true)
             centerText = "Expense\nBreakdown"
             setCenterTextSize(13f)
-            setCenterTextColor(Color.WHITE)
+            setCenterTextColor(textColor)
             rotationAngle = 0f
             isRotationEnabled = true
             isHighlightPerTapEnabled = true
             legend.isEnabled = true
-            legend.textColor = Color.WHITE
+            legend.textColor = textColor
             legend.textSize = 11f
-            setEntryLabelColor(Color.WHITE)
+            setEntryLabelColor(textColor)
             setEntryLabelTextSize(11f)
             setNoDataText("No expense data yet")
-            setNoDataTextColor(Color.WHITE)
+            setNoDataTextColor(textColor)
         }
     }
 
@@ -145,6 +151,7 @@ class TotalAccountsFragment : Fragment() {
             Color.parseColor("#26A69A"), // teal
         )
 
+        val textColor = chartTextColor()
         val dataSet = PieDataSet(entries, "").apply {
             setColors(colors)
             sliceSpace = 3f
@@ -153,13 +160,13 @@ class TotalAccountsFragment : Fragment() {
             valueLinePart1Length = 0.4f
             valueLinePart2Length = 0.4f
             yValuePosition = PieDataSet.ValuePosition.OUTSIDE_SLICE
-            valueLineColor = Color.WHITE
+            valueLineColor = textColor
         }
 
         val data = PieData(dataSet).apply {
             setValueFormatter(PercentFormatter(pieChart))
             setValueTextSize(11f)
-            setValueTextColor(Color.WHITE)
+            setValueTextColor(textColor)
         }
 
         pieChart.data = data
